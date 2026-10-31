@@ -6,6 +6,8 @@
 
 **首发候选：0.1.0-beta.1 · Chrome Manifest V3 · GPL-3.0-only。** 在插件内配置自己的 DeepSeek API Key，直接调用官方服务，无需启动 Java 后端。模型调用费用由使用者的服务商账户承担。
 
+[官网与安装教程](https://westielens.pages.dev/) · [English website](https://westielens.pages.dev/en/)
+
 [开发说明](docs/开发说明书.md) · [架构与代码组织](docs/架构与代码组织.md) · [隐私说明](PRIVACY.md) · [更新记录](CHANGELOG.md) · [参与贡献](CONTRIBUTING.md)
 
 ## 安装与开始使用
@@ -31,7 +33,7 @@ npm run build
 
 ### 安装预构建 ZIP
 
-发布页提供安装包时，下载 WestieLens 对应版本的 Chrome ZIP，解压后在扩展管理页加载解压目录；目录内应直接包含 manifest.json。源码与更新说明应与安装包版本相匹配。当前没有上架 Chrome Web Store。
+从[官网](https://westielens.pages.dev/#download)下载 WestieLens 0.1.0-beta.1 插件 ZIP，解压后在扩展管理页加载解压目录；目录内应直接包含 manifest.json。官网同时提供对应版本源码和 SHA-256 校验文件。当前没有上架 Chrome Web Store。
 
 从其他开发版本切换时，新的扩展 ID 不共享旧扩展配置，需在新插件内配置自己的密钥。请勿同时启用多个相同用途的开发版本，以免混淆操作入口。
 
@@ -109,6 +111,7 @@ E2E 使用临时浏览器配置，模型/词典请求由本地测试替身拦截
 | extension/utils | 消息协议、DTO、过滤、路由和语音工具 |
 | extension/tests、extension/e2e | 单元测试与真实浏览器回归 |
 | extension/public/icon、extension/assets/branding | 西高地图标与设计原图 |
+| website | Cloudflare Pages 中英文介绍、安装教程与固定版本下载 |
 | backend | Java 17 / Spring Boot 参考实现 |
 | docs | 开发规格、架构、验收、命名和许可说明 |
 
