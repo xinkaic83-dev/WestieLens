@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WestieLens 西高地伴读 · 读懂英文，也看清句子</title>
+  <meta name="description" content="WestieLens 是开源的 Chrome 英文阅读助手。在真实网页里划词，查看中文释义、句子结构、语法和英文朗读。使用你自己的 DeepSeek Key。">
+  <meta name="theme-color" content="#f6f7ef"><meta name="color-scheme" content="light">
+  <meta property="og:title" content="WestieLens · 西高地伴读"><meta property="og:description" content="让每一次英文阅读，都多一点理解。开源 Chrome 扩展，自带 DeepSeek Key。">
+  <link rel="alternate" hreflang="zh-CN" href="/"><link rel="alternate" hreflang="en" href="/en/"><link rel="icon" href="/assets/logo.png"><link rel="stylesheet" href="/style.css"><script type="module" src="/site.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">跳到主要内容</a>
+  <div class="site-header"><header class="header wrap">
+    <a class="brand" href="/" aria-label="WestieLens 首页"><img src="/assets/logo.png" width="44" height="44" alt=""><span>WestieLens<small>西高地伴读</small></span></a>
+    <nav aria-label="主导航"><a class="nav-scenes" href="#try">真实界面</a><a class="nav-how" href="#how">安装教程</a><a class="nav-source" href="https://github.com/xinkaic83-dev/WestieLens">GitHub ↗</a><a class="language-switch" href="/en/" lang="en" hreflang="en" aria-label="切换至英文网站">EN</a><a class="nav-download" href="/downloads/WestieLens-__VERSION__-chrome.zip" download aria-label="下载 WestieLens 插件">下载插件 ↓</a></nav>
+  </header></div>
+  <main id="main">
+    <section class="hero wrap">
+      <div class="hero-copy">
+        <p class="product-type"><span class="dot"></span>Chrome 英文阅读插件</p>
+        <h1>把英文读懂，<br>也把<span class="underline">句子看清。</span></h1>
+        <p class="hero-lead">划词查释义，拆解句子结构，听英文朗读。</p>
+        <p class="intro">不离开正在读的网页，让西高地陪你<br class="desktop-break">把生词和长句，一点点读明白。</p>
+        <div class="hero-actions"><a class="button primary" href="/downloads/WestieLens-__VERSION__-chrome.zip" download aria-describedby="hero-download-note">下载 WestieLens 插件 <span aria-hidden="true">↓</span></a><a class="button secondary" href="#how">查看安装教程 ↗</a></div>
+        <p class="hero-note" id="hero-download-note">电脑版 Chrome · ZIP 压缩包 · 解压后手动安装</p>
+        <p class="key-reminder">插件开源免费，需自备 DeepSeek Key；API 费用自理。</p>
+      </div>
+      <div class="hero-preview">
+        <div class="preview-heading"><span class="eyebrow">WESTIELENS / 句子分析</span><span class="real-badge">实际截图</span></div>
+        <button type="button" class="hero-crop screenshot-open" data-open-shot="sentence" aria-label="放大查看真实句子分析截图"><img src="/assets/sentence-detail.png" alt="真实句子分析局部：原文、中文译文、英文朗读和句子成分" width="984" height="1900" fetchpriority="high"><span class="image-zoom-hint">查看完整分析 ↗</span></button>
+        <p class="visual-foot"><span class="dot"></span>同一句原文，译文与结构一起看。</p>
+      </div>
+    </section>
+    <div class="principles"><div class="wrap"><span>在原网页里学习</span><span>单词、句子都能朗读</span><span>点击分析后才请求模型</span><span>密钥仅保存在本地</span></div></div>
+    <section id="try" class="section wrap screenshots-section">
+      <div class="section-heading"><p class="eyebrow">在熟悉的网页里，多看懂一点</p><h2>生词和长句，<br>都有自己的打开方式。</h2><p>看看 WestieLens 在真实阅读中的样子。图片展示局部，点击可查看完整原图。</p></div>
+      <div class="screenshot-tabs" role="group" aria-label="切换真实使用截图">
+        <button type="button" data-shot="reading" aria-pressed="true" aria-controls="screenshot-panel"><span>01</span> 阅读现场</button>
+        <button type="button" data-shot="word" aria-pressed="false" aria-controls="screenshot-panel"><span>02</span> 单词释义</button>
+        <button type="button" data-shot="sentence" aria-pressed="false" aria-controls="screenshot-panel"><span>03</span> 句子分析</button>
+      </div>
+      <figure id="screenshot-panel" class="shot-stage" data-layout="reading" aria-labelledby="shot-title">
+        <figcaption class="shot-copy" aria-live="polite" aria-atomic="true"><p class="eyebrow" id="shot-kicker">01 / 在原网页里学习</p><h3 id="shot-title">原文在左边，理解在手边。</h3><p id="shot-description">在 News in Levels 选中一句英文，右侧就能查看译文、朗读和句子分析。原文留在视线里，阅读可以接着往下走。</p><ul id="shot-points"><li>划词后，侧边栏更新选区预览。</li><li>点击“分析”，再生成对应结果。</li><li>回到原标签页，保留已打开的面板和结果。</li></ul></figcaption>
+        <button class="gallery-image-button screenshot-open" id="gallery-open" type="button" data-open-shot="reading" aria-label="放大查看阅读现场截图">
+          <span class="reading-pair" id="reading-pair"><span class="article-focus"><span class="crop-label">正在读的原文</span><img src="/assets/reading-sentence.png" alt="News in Levels 文章中选中的英文句子" width="3420" height="1904" loading="lazy"></span><span class="panel-focus"><span class="crop-label">侧边栏分析结果</span><img src="/assets/reading-sentence.png" alt="同一张真实截图中的 WestieLens 译文和句子分析" width="3420" height="1904" loading="lazy"></span></span>
+          <span class="gallery-crop" id="gallery-crop" hidden><img id="gallery-image" src="/assets/reading-sentence.png" alt="" width="3420" height="1904" loading="lazy"></span>
+          <span class="image-zoom-hint">查看完整截图 ↗</span>
+        </button>
+      </figure>
+      <p class="screenshot-credit">实际使用截图，阅读网页来自 <a href="https://www.newsinlevels.com/" target="_blank" rel="noopener noreferrer">News in Levels ↗</a>。原图中的文章、品牌与广告属于原网站，不代表合作或推荐。AI 输出仅供学习参考。</p>
+    </section>
+    <section id="how" class="section tutorial-section"><div class="wrap">
+      <div class="section-heading"><p class="eyebrow">第一次安装，跟着这四步走</p><h2>四步，<span class="no-wrap">开始英文阅读。</span></h2><p>当前为 Chrome 测试版，尚未上架扩展商店。下载 ZIP 后，在浏览器中手动加载即可。</p></div>
+      <div class="installation-layout">
+        <ol class="guide-steps" aria-label="安装步骤">
+          <li><button type="button" data-guide="download" aria-pressed="true" aria-controls="guide-download"><span class="step-number">01</span><span><strong>下载并解压</strong><small>把插件文件夹留在电脑里</small></span><span class="step-arrow" aria-hidden="true">↗</span></button></li>
+          <li><button type="button" data-guide="load" aria-pressed="false" aria-controls="guide-load"><span class="step-number">02</span><span><strong>加载到 Chrome</strong><small>开启开发者模式，加载扩展</small></span><span class="step-arrow" aria-hidden="true">↗</span></button></li>
+          <li><button type="button" data-guide="settings" aria-pressed="false" aria-controls="guide-settings"><span class="step-number">03</span><span><strong>配置 DeepSeek Key</strong><small>测试连接，然后保存配置</small></span><span class="step-arrow" aria-hidden="true">↗</span></button></li>
+          <li><button type="button" data-guide="reading" aria-pressed="false" aria-controls="guide-reading"><span class="step-number">04</span><span><strong>划词并分析</strong><small>也可以通过右键打开伴读</small></span><span class="step-arrow" aria-hidden="true">↗</span></button></li>
+        </ol>
+        <div class="guide-stage" aria-live="polite">
+          <section class="guide-panel" id="guide-download" aria-labelledby="guide-download-title"><p class="eyebrow">01 / 下载插件文件</p><h3 id="guide-download-title">先解压，再安装。</h3><p>下载 WestieLens 插件 ZIP 压缩包，解压到一个固定目录。Chrome 会从这个文件夹加载插件，请保留它。</p><div class="file-diagram" aria-label="文件示意：下载 ZIP，解压后得到包含 manifest.json 的插件文件夹"><div class="zip-icon" aria-hidden="true"><span>ZIP</span><i></i><i></i><i></i></div><div><strong>WestieLens 插件</strong><span>解压后的文件夹</span><code>manifest.json</code><small>选择直接包含这个文件的目录</small></div></div><a class="button primary" href="/downloads/WestieLens-__VERSION__-chrome.zip" download>下载 WestieLens 插件 <span aria-hidden="true">↓</span></a></section>
+          <section class="guide-panel" id="guide-load" aria-labelledby="guide-load-title" hidden><p class="eyebrow">02 / 在 Chrome 中加载</p><h3 id="guide-load-title">打开扩展程序管理页。</h3><p>把下方地址复制到 Chrome 地址栏，再按顺序操作。</p><div class="address-copy"><code>chrome://extensions</code><button type="button" id="copy-extensions">复制地址</button></div><p id="copy-status" role="status"></p><ol class="load-instructions"><li><span>1</span><div><strong>开启“开发者模式”</strong><p>开关位于扩展管理页右上角。</p></div></li><li><span>2</span><div><strong>点击“加载已解压的扩展程序”</strong><p>选择刚才解压得到的插件文件夹。</p></div></li><li><span>3</span><div><strong>确认出现 WestieLens</strong><p>点击 Chrome 工具栏的扩展图标，即可找到插件。</p></div></li></ol></section>
+          <section class="guide-panel" id="guide-settings" aria-labelledby="guide-settings-title" hidden><div class="guide-image-heading"><div><p class="eyebrow">03 / 在插件中配置</p><h3 id="guide-settings-title">使用你自己的 Key。</h3></div><a href="https://platform.deepseek.com/" target="_blank" rel="noopener noreferrer">获取 DeepSeek Key ↗</a></div><p>在 DeepSeek 开放平台创建 API Key，打开插件右上角的“配置 AI”，填入 Key，测试连接后点击“保存配置”。不要在本网站提交 Key。</p><button class="guide-settings-crop screenshot-open" type="button" data-open-shot="settings" aria-label="放大查看 AI 配置真实截图"><img src="/assets/ai-settings.png" alt="真实配置界面：API Key 输入框、模型选择、测试连接和保存配置" width="946" height="1904" loading="lazy"><span class="image-zoom-hint">查看配置原图 ↗</span></button></section>
+          <section class="guide-panel" id="guide-reading" aria-labelledby="guide-reading-title" hidden><p class="eyebrow">04 / 回到正在读的网页</p><h3 id="guide-reading-title">选中英文，点击分析。</h3><p>安装后先刷新已打开的网页一次。选中单词或句子，再点击侧边栏里的“分析”；也可以通过下面的右键入口打开侧边栏。</p><button class="guide-context-crop screenshot-open" type="button" data-open-shot="context" aria-label="放大查看右键入口真实截图"><img src="/assets/context-menu.png" alt="真实右键菜单中选中的“用 WestieLens 分析 substance”入口" width="1584" height="1768" loading="lazy"><span class="image-zoom-hint">查看右键入口原图 ↗</span></button><p class="guide-caption">右键打开后先显示选区预览，点击“分析”才会请求模型。</p></section>
+        </div>
+      </div>
+      <div class="key-note"><span aria-hidden="true">↳</span><p><strong>插件开源免费，API 调用由你的 DeepSeek 账户计费。</strong> 免费网页聊天与 API 是不同服务；测试连接成功不代表账户余额充足。</p></div>
+    </div></section>
+    <section id="download" class="download-section"><div class="wrap download-inner"><div><p class="eyebrow">下一篇英文，有西高地陪你读</p><h2>带上你的西高地伴读。</h2><p>Chrome 浏览器扩展 · __VERSION__ · GPLv3 开源</p></div><div class="download-actions"><a class="button primary" href="/downloads/WestieLens-__VERSION__-chrome.zip" download aria-describedby="download-format">下载 WestieLens 插件 <span aria-hidden="true">↓</span></a><p id="download-format">适用于电脑版 Chrome · ZIP 格式<br>解压后按安装教程手动加载</p><div><a href="/downloads/WestieLens-__VERSION__-source.zip" download>对应版本源码</a><span aria-hidden="true"> · </span><a href="/downloads/SHA256SUMS">文件校验</a></div></div></div></section>
+    <section id="faq" class="section wrap faq-section"><div class="section-heading"><p class="eyebrow">你可能还想知道</p><h2>先把这些说明白。</h2></div><div class="faq-list"><details><summary>插件免费吗？为什么还需要 Key？</summary><p>WestieLens 的开源代码和本页安装包免费提供。分析能力调用 DeepSeek 官方 API，使用者需要自己的 Key，并承担相应 API 费用。项目不代收模型费用。</p></details><details><summary>需要安装 Java 或购买服务器吗？</summary><p>不需要。插件直接连接官方 API，不依赖项目中的 Java 参考后端。安装插件并配置 Key 后即可使用。</p></details><details><summary>我的 Key 和阅读内容会发到哪里？</summary><p>Key 保存在你浏览器的本地扩展存储中，请求 DeepSeek 时使用。点击分析后，所选文本会发给 DeepSeek；查词会请求公开词典。词典录音和在线语音可能涉及第三方服务。网站不会要求你填写 Key。详见<a href="/privacy.html">隐私说明</a>。</p></details><details><summary>为什么更新后划词没有反应？</summary><p>更新或重新加载插件后，刷新此前已经打开的网页一次，再划词即可。浏览器内部页、商店受限页、PDF 和跨域 iframe 暂不承诺支持。</p></details><details><summary>可以修改或再分发吗？</summary><p>可以按 GPLv3（仅第 3 版）使用、修改和分发。分发受 GPL 覆盖的版本时，需履行保留声明、注明修改和提供对应源码等义务。完整条件见<a href="/LICENSE.txt">许可证</a>，第三方组件遵守各自许可。</p></details></div></section>
+  </main>
+  <footer class="footer wrap"><a class="brand" href="/"><img src="/assets/logo.png" width="36" height="36" alt=""><span>WestieLens<small>让阅读，多一点理解。</small></span></a><div><a href="/privacy.html">隐私说明</a><a href="https://github.com/xinkaic83-dev/WestieLens">GitHub ↗</a><a href="https://gitee.com/wttcxk/westie-lens">Gitee ↗</a><a href="https://github.com/xinkaic83-dev/WestieLens/issues">反馈问题 ↗</a></div><p>© 2026 ReadWise English Contributors · GPL-3.0-only<br>截图展示实际使用界面；AI 输出可能有误，不代表准确性承诺。</p></footer>
+  <dialog id="image-dialog" class="image-dialog" aria-labelledby="image-dialog-title"><div class="image-dialog-header"><div><p class="eyebrow">WESTIELENS / 实际使用截图</p><h2 id="image-dialog-title">阅读现场</h2></div><div class="image-dialog-actions"><a id="image-original" href="/assets/reading-sentence.png" target="_blank" rel="noopener noreferrer">打开原图 ↗</a><button type="button" id="image-dialog-close" aria-label="关闭截图大图">关闭 ×</button></div></div><div class="image-dialog-body"><img id="image-dialog-image" alt=""></div></dialog>
+</body></html>

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy notice · WestieLens</title>
+  <meta name="description" content="How the WestieLens extension and website handle API keys, selected text, network requests and local data.">
+  <meta name="theme-color" content="#f6f7ef">
+  <link rel="alternate" hreflang="zh-CN" href="/privacy.html"><link rel="alternate" hreflang="en" href="/en/privacy.html">
+  <link rel="icon" href="/assets/logo.png"><link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to main content</a>
+  <header class="header wrap">
+    <a class="brand" href="/en/"><img src="/assets/logo.png" width="42" height="42" alt=""><span>WestieLens<small>English companion</small></span></a>
+    <nav aria-label="Main navigation"><a href="/en/">Home ↗</a><a class="nav-source" href="https://github.com/xinkaic83-dev/WestieLens">Source ↗</a><a class="language-switch" href="/privacy.html" lang="zh-CN" hreflang="zh-CN" aria-label="Read the privacy notice in Chinese">中文</a></nav>
+  </header>
+  <main class="privacy-main" id="main">
+    <p class="eyebrow">Know where your data goes</p>
+    <h1>Privacy notice</h1>
+    <p class="updated">Updated October 31, 2026 · Extension version __VERSION__</p>
+    <p class="notice">This website provides product information, installation instructions and downloads. It does not accept or store your DeepSeek API key. Enter your key only in the installed extension's settings panel.</p>
+    <h2>What does the extension store locally?</h2>
+    <ul>
+      <li>Your API key, model and configuration revision are stored in chrome.storage.local, restricted to trusted extension contexts. chrome.storage.sync is not used.</li>
+      <li>Read-aloud preferences are stored separately on your device. Selected text, source-page URLs and analysis results are cached in chrome.storage.session, with no promise of retention after a browser restart.</li>
+      <li>Local extension storage is not an encrypted vault. Someone with access to your browser profile or computer may be able to read it.</li>
+    </ul>
+    <h2>When are network requests made?</h2>
+    <ul>
+      <li>Selecting text only updates the local preview; it does not automatically call the model. Clicking Analyze sends the text and any content needed for Chinese meaning completion to the official DeepSeek API. Your key is used only to request that service.</li>
+      <li>Word lookups send the word to Free Dictionary API without your DeepSeek key.</li>
+      <li>The connection test reads the DeepSeek model list. It does not send the current selection or request model generation.</li>
+      <li>Dictionary recordings are loaded from third-party audio URLs. Voices marked as online by the browser may send read-aloud text to the browser's voice service for processing.</li>
+    </ul>
+    <h2>Website visits and hosting</h2>
+    <p>This website has no registration, sign-in, analysis submission or key-entry feature. It adds no project-operated analytics, advertising trackers or third-party fonts. Switching or enlarging screenshots does not call AI services. The copy-address button writes the extensions-page address to your clipboard only when you click it.</p>
+    <p>The website is hosted on Cloudflare. Cloudflare may process IP addresses, requests and access logs to operate and protect its hosting service; see its <a href="https://www.cloudflare.com/privacypolicy/">privacy policy</a>. External services such as GitHub, Gitee and DeepSeek handle your visit when you follow their links.</p>
+    <h2>How can I remove my data?</h2>
+    <p>Clear configuration in the extension removes the saved key and cached results while keeping read-aloud preferences. Uninstalling the extension removes its browser storage. This website does not store your extension settings, so there is no need to submit a deletion request here.</p>
+    <h2>Costs, accuracy and feedback</h2>
+    <p>Your API provider bills usage to your own account. A successful connection test does not confirm sufficient balance or guarantee that generation will succeed. AI output is for learning and may be inaccurate. External services have their own terms and privacy policies.</p>
+    <p>When reporting a problem through <a href="https://github.com/xinkaic83-dev/WestieLens/issues">GitHub Issues</a>, do not include API keys, sensitive selections, private webpage URLs or screenshots containing them.</p>
+    <p>See the extension's <a href="https://github.com/xinkaic83-dev/WestieLens/blob/main/PRIVACY.md">source privacy notice</a>, the <a href="/LICENSE.txt">GPLv3 license</a> and <a href="/THIRD_PARTY_NOTICES.txt">third-party notices</a> for more information.</p>
+  </main>
+  <footer class="footer wrap"><a href="/en/">← Back to WestieLens</a><p>© 2026 ReadWise English Contributors · GPL-3.0-only</p></footer>
+</body>
+</html>
