@@ -1,0 +1,38 @@
+# 构建产物
+backend/target/
+extension/node_modules/
+extension/.output/
+extension/.wxt/
+
+# 本地密钥与本地配置，禁止提交（说明书 §4.6）
+.env
+application-local.yml
+*.local.yaml
+
+# IDE
+.idea/
+.vscode/
+
+# 系统文件
+.DS_Store
+
+# 本地 AI 工具状态与会话记录
+.workbuddy/
+.codex/
+.agents/
+
+# 本地环境配置（保留无密钥的示例）
+.env.*
+!.env.example
+application-local.yaml
+*.local.yml
+*.local.yaml
+
+# 日志、测试输出与临时构建包
+*.log
+extension/test-results/
+extension/playwright-report/
+*.zip
+
+# 本地发布附件，不提交到源码历史
+/release/

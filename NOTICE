@@ -1,0 +1,18 @@
+WestieLens
+Copyright (c) 2026 ReadWise English Contributors
+
+Original project maintainer: xinkaic83-dev
+Original source repository: https://github.com/xinkaic83-dev/WestieLens
+Gitee mirror: https://gitee.com/wttcxk/westie-lens
+
+The original code in this revision is licensed under the GNU General Public
+License, version 3 only (SPDX: GPL-3.0-only). See LICENSE for the full terms.
+This public repository starts from an independent GPLv3 source snapshot.
+It does not contain the earlier private development repository history.
+
+Third-party code retains its own copyright and license notices. See
+THIRD_PARTY_NOTICES.txt for selected bundled dependencies and tooling.
+External API services are subject to their providers' separate terms.
+
+This notice identifies the original project. It does not add restrictions
+to the GNU GPL, grant trademark rights, or imply endorsement of forks.

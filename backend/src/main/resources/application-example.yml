@@ -1,0 +1,46 @@
+# 环境配置示例模板（说明书 §4.6）：复制为 backend/application-local.yml 并按实际环境修改，
+# application-local.yml 与 .env 均已列入 .gitignore，禁止把真实密钥提交到 Git。
+#
+# 两种注入方式任选其一：
+#   1. 系统环境变量：export DEEPSEEK_API_KEY=sk-xxxxxxxx
+#   2. 直接在 application-local.yml 里写死密钥（仅限本机，注意不要提交）：
+#      deepseek:
+#        api-key: sk-xxxxxxxx
+
+server:
+  address: 127.0.0.1
+  port: 8080
+
+cors:
+  allowed-origin-patterns: "chrome-extension://*"
+
+# 请求频率限制（§4.6.1 / R6）：防止网页意外触发或滥用烧掉大模型额度
+rate-limit:
+  enabled: true
+  permits-per-minute: 30
+
+deepseek:
+  api-key: ${DEEPSEEK_API_KEY:}
+  base-url: https://api.deepseek.com
+  # 模型名以实现时官方模型列表为准（§4.3 / R5）；2026-10 实测 deepseek-flash 可用
+  model: deepseek-flash
+  # false = 非思考模式（§3.1）。实测关闭后 2.2s，开启约 6.0s
+  thinking-enabled: false
+
+http:
+  connect-timeout-ms: 5000
+  read-timeout-short-ms: 15000
+  read-timeout-long-ms: 45000
+  long-text-threshold: 100
+
+# 词典主数据源（§4.4）：Free Dictionary API，免 Key
+# 超时取较短值：词典不可用时应快速转入 AI 兜底，不拖住整个查词请求
+dictionary:
+  base-url: https://api.dictionaryapi.dev/api/v2/entries/en
+  connect-timeout-ms: 5000
+  read-timeout-ms: 8000
+
+# 后端有界缓存（§4.5）：查词与分析各一份，不承诺严格 LRU 淘汰顺序
+cache:
+  max-size: 1000
+  ttl-hours: 24
